@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from './components/Home'
 import Signup from './components/Signup'
+import Login from "./components/Login";
 
 class App extends React.Component {
   state = {
@@ -25,6 +26,11 @@ class App extends React.Component {
             exact
             path="/signup"
             render={props => <Signup {...props} setUser={this.setUser} />}
+          />
+           <Route
+            exact
+            path="/login"
+            render={props => <Login {...props} setUser={this.setUser} />}
           />
         </Switch>
         </BrowserRouter>
